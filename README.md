@@ -2,7 +2,7 @@ Snake Game
 - Credits to CodingWith-Adam
 
 Additional Customisations/Features
-- Implemented different difficulty
+- Implemented difficulty levels based on score
 - Customised Game Over Screen
 - Implemented Restart Button 
 - Customised CSS (basic styling)
