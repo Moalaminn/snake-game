@@ -88,6 +88,16 @@ function isGameOver() {
         ctx.fillStyle = "white";
         ctx.font = "50px Verdana";
         ctx.fillText("Game Over!", canvas.width / 7.5, canvas.height / 2);
+        ctx.font = "20px Verdana";
+        ctx.fillText("Score: " + score, canvas.width / 2.5, canvas.height /2.75);
+
+
+        const restart = document.querySelector('.restart');
+        restart.classList.add('restart-active');
+
+        restart.addEventListener('click', function() {
+            window.location.reload();
+        });
     }
 
     return gameOver;
@@ -145,6 +155,7 @@ function checkAppleCollision() {
 document.addEventListener('keydown', keyDown);
 
 function keyDown(event) {
+    document.querySelector(".starting-screen").style.display = "none";
     // up
     if (event.keyCode == 38) {
         if (yVel == 1) return;
